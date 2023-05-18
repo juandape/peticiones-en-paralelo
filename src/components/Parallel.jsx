@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
 
-//hago la peticion de los episodios
+// hago la peticion de los episodios
+
 async function getEpisodes() {
   const response = await fetch('https://rickandmortyapi.com/api/episode/');
   const data = await response.json();
@@ -17,13 +18,14 @@ async function getCharacters(url) {
 
 
 //solicito la data
-async function getData() {
+async function getInfo() {
   const episodes = await getEpisodes();
 
   //filtro los episodios para que cada uno me muestre los 10 primeros personajes
   const charEpisodes = episodes.reduce((acum, item) => {
     return [...acum, ...item.characters.slice(0, 10)];
   }, []);
+  console.log(charEpisodes)
 
 //obtengo las url de los capitulos donde aparece cada personaje
   const chPromise = charEpisodes.map((url) => {
@@ -53,7 +55,7 @@ function Parallel() {
 
   //lo uso para solicitar solo una vez los datos
   useEffect(() => {
-    getData().then((data) => {
+    getInfo().then((data) => {
       setData(data);
     });
   }, []);
