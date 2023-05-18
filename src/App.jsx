@@ -1,4 +1,4 @@
-import Parallel from './components/parallel';
+import Parallel from './components/Parallel';
 import './App.css';
 
 function App() {
