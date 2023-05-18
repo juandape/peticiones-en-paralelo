@@ -49,7 +49,7 @@ console.log(data)
 
   return (
     <div>
-      <h1>Rick and Morty</h1>
+      <h1>Rick and Morty Parallel Fetch</h1>
       <ul>
         {data.map((chapter) => (
           <li key={chapter.id}>
