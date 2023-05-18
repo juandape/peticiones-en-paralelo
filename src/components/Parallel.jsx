@@ -72,7 +72,7 @@ function Parallel() {
             <h3>Characters:</h3>
             <ul>
               {chapter.characters.map((char) => (
-                <li>
+                <li key={char.id}>
                   {char.name} - {char.species} - {char.status}
                 </li>
               ))}
