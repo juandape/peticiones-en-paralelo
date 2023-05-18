@@ -8,7 +8,7 @@ create a React Project
 
 ## Vercel page
 
-http://workshop-store-ten.vercel.app/
+https://peticiones-en-paralelo-theta.vercel.app/
 
 ## Screenshot
 
